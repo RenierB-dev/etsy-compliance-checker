@@ -2,6 +2,8 @@
 
 A powerful CLI tool to scan your Etsy shop for policy violations and compliance issues. Automatically detect prohibited keywords, missing required fields, and other potential violations before they become problems.
 
+**NEW**: Premium web dashboard with automated monitoring, one-click fixes, and compliance analytics! See [web/README.md](web/README.md) for details.
+
 ## Features
 
 - **Comprehensive Violation Detection**
@@ -243,13 +245,19 @@ The tool implements automatic rate limiting (500ms between requests) to comply w
 - Review and customize `rules.json` for your specific needs
 - Some violations may require manual review
 
-## Future Enhancements
+## Web Dashboard (Premium)
 
-- OAuth 2.0 support for advanced features
-- Real-time monitoring mode
-- Email notifications for critical violations
-- Batch editing suggestions
-- Integration with Etsy's bulk edit API
+Want more than just CLI? Check out our premium web dashboard:
+
+- **Visual Dashboard**: Beautiful UI with compliance scores and charts
+- **Automated Monitoring**: Daily background scans with email alerts
+- **One-Click Fixes**: Apply suggested fixes directly via Etsy API
+- **Historical Tracking**: Store and analyze scan history over time
+- **Stripe Payments**: Subscription-based pricing (Free tier available!)
+
+See [web/README.md](web/README.md) for setup instructions.
+
+**Note**: The CLI tool remains completely free! The web dashboard is an optional premium add-on.
 
 ## License
 
