@@ -1,0 +1,108 @@
+{
+  "prohibitedKeywords": {
+    "weapons": {
+      "severity": "critical",
+      "keywords": [
+        "gun", "guns", "firearm", "firearms", "rifle", "rifles", "pistol", "pistols",
+        "weapon", "weapons", "ammunition", "ammo", "bullet", "bullets",
+        "knife", "knives", "dagger", "sword", "machete", "switchblade"
+      ],
+      "description": "Weapons and weapon-related items are prohibited on Etsy"
+    },
+    "adultContent": {
+      "severity": "critical",
+      "keywords": [
+        "porn", "pornographic", "xxx", "explicit", "sex toy", "adult toy",
+        "erotic", "nude", "nudity", "nsfw"
+      ],
+      "description": "Adult content and explicit material are prohibited"
+    },
+    "illegalItems": {
+      "severity": "critical",
+      "keywords": [
+        "drug", "drugs", "cocaine", "heroin", "meth", "marijuana", "cannabis",
+        "counterfeit", "fake", "replica", "knock-off", "bootleg",
+        "prescription", "medical marijuana", "cbd oil"
+      ],
+      "description": "Illegal items and controlled substances are prohibited"
+    },
+    "trademarkViolations": {
+      "severity": "critical",
+      "keywords": [
+        "nike", "adidas", "gucci", "prada", "louis vuitton", "chanel",
+        "disney", "marvel", "star wars", "pokemon", "harry potter",
+        "supreme", "rolex", "versace", "burberry", "coach"
+      ],
+      "description": "Unauthorized use of trademarked brand names"
+    },
+    "prohibitedClaims": {
+      "severity": "warning",
+      "keywords": [
+        "cure", "cures", "heal", "heals", "treat", "treats", "medical",
+        "therapeutic", "therapy", "diagnosis", "fda approved",
+        "guaranteed", "guarantee", "instant results", "miracle"
+      ],
+      "description": "Medical claims and guarantees are not allowed"
+    },
+    "spamKeywords": {
+      "severity": "warning",
+      "keywords": [
+        "buy now", "click here", "limited time", "act now", "hurry",
+        "best seller", "top rated", "number one", "#1"
+      ],
+      "description": "Spam and misleading promotional language"
+    }
+  },
+  "requiredFields": [
+    {
+      "field": "materials",
+      "severity": "warning",
+      "description": "Materials should be specified for physical items"
+    },
+    {
+      "field": "shipping_profile",
+      "severity": "warning",
+      "description": "Shipping information should be complete"
+    },
+    {
+      "field": "tags",
+      "minCount": 3,
+      "severity": "info",
+      "description": "At least 3 tags recommended for better discoverability"
+    }
+  ],
+  "titlePatterns": [
+    {
+      "pattern": "^.{0,19}$",
+      "severity": "warning",
+      "description": "Title is too short (minimum 20 characters recommended)"
+    },
+    {
+      "pattern": "[A-Z]{5,}",
+      "severity": "warning",
+      "description": "Excessive use of capital letters in title"
+    },
+    {
+      "pattern": "!!!+",
+      "severity": "info",
+      "description": "Excessive use of exclamation marks"
+    }
+  ],
+  "descriptionPatterns": [
+    {
+      "pattern": "^.{0,49}$",
+      "severity": "warning",
+      "description": "Description is too short (minimum 50 characters recommended)"
+    },
+    {
+      "pattern": "http://|https://|www\\.",
+      "severity": "critical",
+      "description": "External links in descriptions are prohibited"
+    },
+    {
+      "pattern": "@|email|contact me at",
+      "severity": "warning",
+      "description": "Contact information outside Etsy messaging is discouraged"
+    }
+  ]
+}

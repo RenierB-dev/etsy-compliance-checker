@@ -1,0 +1,33 @@
+{
+  "name": "etsy-compliance-checker",
+  "version": "1.0.0",
+  "description": "CLI tool to check Etsy shop compliance and detect policy violations",
+  "main": "dist/index.js",
+  "bin": {
+    "etsy-check": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "keywords": [
+    "etsy",
+    "compliance",
+    "cli",
+    "checker"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.1.0",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.2",
+    "chalk": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.2"
+  }
+}
