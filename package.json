@@ -1,9 +1,10 @@
 {
-  "name": "etsy-compliance-checker",
-  "version": "1.0.0",
-  "description": "CLI tool to check Etsy shop compliance and detect policy violations",
+  "name": "sellerguard-pro",
+  "version": "2.0.0",
+  "description": "Multi-platform e-commerce compliance checker for Etsy, Amazon, and more. Protect your seller account with 108+ compliance rules.",
   "main": "dist/index.js",
   "bin": {
+    "sellerguard": "./dist/index.js",
     "etsy-check": "./dist/index.js"
   },
   "scripts": {
@@ -13,11 +14,16 @@
   },
   "keywords": [
     "etsy",
+    "amazon",
     "compliance",
-    "cli",
-    "checker"
+    "seller-tools",
+    "e-commerce",
+    "sp-api",
+    "etsy-api",
+    "policy-checker",
+    "multi-platform"
   ],
-  "author": "",
+  "author": "SellerGuard Pro",
   "license": "MIT",
   "dependencies": {
     "commander": "^11.1.0",

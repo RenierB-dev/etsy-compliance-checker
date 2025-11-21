@@ -1,7 +1,7 @@
 {
-  "name": "@sellerguard-pro/web",
+  "name": "sellerguard-pro-web",
   "version": "2.0.0",
-  "description": "SellerGuard Pro - Multi-platform e-commerce compliance checker (Web Dashboard)",
+  "description": "SellerGuard Pro - Multi-platform e-commerce compliance dashboard. Monitor Etsy & Amazon listings with 108+ automated rules.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "directories": {
