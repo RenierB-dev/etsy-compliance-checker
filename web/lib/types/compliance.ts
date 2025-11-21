@@ -13,15 +13,19 @@ export type RuleCategory =
   | 'pricing_fees'
   | 'shop_standards';
 
-export interface ComplianceRule {
+export interface ComplianceRule<T = EtsyListing | AmazonListing> {
   id: string;
   category: RuleCategory;
   severity: Severity;
   name: string;
   description: string;
   platform: Platform;
-  check: (listing: EtsyListing | AmazonListing) => ViolationResult | null;
+  check: (listing: T) => ViolationResult | null;
 }
+
+// Platform-specific rule types
+export type EtsyComplianceRule = ComplianceRule<EtsyListing>;
+export type AmazonComplianceRule = ComplianceRule<AmazonListing>;
 
 export interface ViolationResult {
   ruleId: string;

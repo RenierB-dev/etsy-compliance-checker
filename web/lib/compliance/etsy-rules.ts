@@ -9,13 +9,13 @@
  * 5. Shop Standards (8 rules)
  */
 
-import { ComplianceRule, EtsyListing, ViolationResult } from '../types/compliance';
+import { EtsyComplianceRule, EtsyListing, ViolationResult } from '../types/compliance';
 
 // ============================================================================
 // CATEGORY 1: PROHIBITED ITEMS (15 rules)
 // ============================================================================
 
-const prohibitedItemsRules: ComplianceRule[] = [
+const prohibitedItemsRules: EtsyComplianceRule[] = [
   {
     id: 'ETSY-PI-001',
     category: 'prohibited_items',
@@ -480,7 +480,7 @@ const prohibitedItemsRules: ComplianceRule[] = [
 // CATEGORY 2: TITLE & DESCRIPTION QUALITY (10 rules)
 // ============================================================================
 
-const titleDescriptionRules: ComplianceRule[] = [
+const titleDescriptionRules: EtsyComplianceRule[] = [
   {
     id: 'ETSY-TD-001',
     category: 'title_description',
@@ -733,7 +733,7 @@ const titleDescriptionRules: ComplianceRule[] = [
 // CATEGORY 3: POLICY COMPLIANCE (10 rules)
 // ============================================================================
 
-const policyComplianceRules: ComplianceRule[] = [
+const policyComplianceRules: EtsyComplianceRule[] = [
   {
     id: 'ETSY-PC-001',
     category: 'policy_compliance',
@@ -959,7 +959,7 @@ const policyComplianceRules: ComplianceRule[] = [
 // CATEGORY 4: PRICING & FEES (5 rules)
 // ============================================================================
 
-const pricingFeesRules: ComplianceRule[] = [
+const pricingFeesRules: EtsyComplianceRule[] = [
   {
     id: 'ETSY-PF-001',
     category: 'pricing_fees',
@@ -1095,7 +1095,7 @@ const pricingFeesRules: ComplianceRule[] = [
 // CATEGORY 5: SHOP STANDARDS (8 rules)
 // ============================================================================
 
-const shopStandardsRules: ComplianceRule[] = [
+const shopStandardsRules: EtsyComplianceRule[] = [
   {
     id: 'ETSY-SS-001',
     category: 'shop_standards',
@@ -1324,7 +1324,7 @@ const shopStandardsRules: ComplianceRule[] = [
 // EXPORT ALL RULES
 // ============================================================================
 
-export const allEtsyRules: ComplianceRule[] = [
+export const allEtsyRules: EtsyComplianceRule[] = [
   ...prohibitedItemsRules,      // 15 rules
   ...titleDescriptionRules,     // 10 rules
   ...policyComplianceRules,     // 10 rules

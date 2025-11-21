@@ -1,0 +1,32 @@
+{
+  "name": "@sellerguard-pro/web",
+  "version": "2.0.0",
+  "description": "SellerGuard Pro - Multi-platform e-commerce compliance checker (Web Dashboard)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "clean": "rm -rf dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "amazon",
+    "etsy",
+    "compliance",
+    "sp-api",
+    "seller-tools"
+  ],
+  "author": "SellerGuard Pro",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.13.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "typescript": "^5.9.3"
+  }
+}
