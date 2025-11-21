@@ -168,9 +168,84 @@ console.log(`Found ${results.data?.length} products`);
 
 See [examples/amazon-api-usage.ts](./lib/examples/amazon-api-usage.ts) for more examples.
 
+## Phase 3: Amazon Compliance Rules ✅
+
+Complete Amazon compliance rule engine with **60 rules** across 6 categories:
+
+### Rule Categories
+
+1. **Product Detail Page** (12 rules)
+   - Title length and formatting
+   - Bullet point optimization
+   - Image requirements
+   - Product description quality
+   - Search term optimization
+
+2. **Brand & Trademarks** (8 rules)
+   - Brand name requirements
+   - Trademark violation detection
+   - Counterfeit keyword detection
+   - Compatible product labeling
+   - Designer brand verification
+
+3. **Restricted Categories** (10 rules)
+   - HAZMAT compliance
+   - FDA regulated products
+   - Pesticides and chemicals
+   - Automotive safety parts
+   - Alcohol and weapons restrictions
+
+4. **FBA Requirements** (8 rules)
+   - FNSKU labeling
+   - Packaging standards
+   - Expiration date requirements
+   - Oversized product handling
+   - Liquid product prep
+
+5. **Content Policy** (12 rules)
+   - Prohibited health claims
+   - External link detection
+   - Contact information removal
+   - Promotional language restrictions
+   - Review solicitation prevention
+
+6. **Technical Requirements** (10 rules)
+   - Product identifier validation
+   - SKU naming conventions
+   - Dimension requirements
+   - Price reasonableness
+   - Buyable status verification
+
+### Rule Severity Distribution
+
+- **Critical** (28 rules): Immediate action required - policy violations
+- **Warning** (20 rules): Important issues affecting listing quality
+- **Info** (12 rules): Optimization suggestions
+
+### Amazon Usage
+
+```typescript
+import { allAmazonRules, amazonRulesByCategory } from './lib/compliance/amazon-rules';
+
+// Check Amazon listing against all rules
+allAmazonRules.forEach(rule => {
+  const violation = rule.check(amazonListing);
+  if (violation) {
+    console.log(violation);
+  }
+});
+
+// Or check by category
+amazonRulesByCategory.content_policy.forEach(rule => {
+  const violation = rule.check(amazonListing);
+  if (violation) {
+    console.log(violation);
+  }
+});
+```
+
 ## Next Phases
 
-- **Phase 3**: Amazon Rules (60+ rules)
 - **Phase 4**: Unified Dashboard
 - **Phase 5**: Rebrand to SellerGuard Pro
 

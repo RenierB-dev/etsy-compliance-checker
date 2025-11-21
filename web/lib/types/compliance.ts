@@ -11,7 +11,13 @@ export type RuleCategory =
   | 'title_description'
   | 'policy_compliance'
   | 'pricing_fees'
-  | 'shop_standards';
+  | 'shop_standards'
+  | 'product_detail_page'
+  | 'brand_trademarks'
+  | 'restricted_categories'
+  | 'fba_requirements'
+  | 'content_policy'
+  | 'technical_requirements';
 
 export interface ComplianceRule<T = EtsyListing | AmazonListing> {
   id: string;
@@ -63,19 +69,48 @@ export interface EtsyListing {
 export interface AmazonListing {
   asin: string;
   sku: string;
+  sellerSku?: string;
   title: string;
-  description: string;
-  bulletPoints: string[];
-  price: number;
-  currency: string;
-  quantity: number;
-  condition: string;
-  category: string;
+  description?: string;
+  bulletPoints?: string[];
   brand?: string;
   manufacturer?: string;
+  productType?: string;
+  price?: number;
+  currency?: string;
+  listPrice?: number;
+  businessPrice?: number;
+  quantity?: number;
+  fulfillmentChannel?: 'DEFAULT' | 'AMAZON_NA' | 'AMAZON_EU';
+  condition?: string;
+  conditionNote?: string;
+  mainImageUrl?: string;
   images?: string[];
-  keywords?: string[];
+  category?: string;
+  productCategory?: string;
+  itemClassification?: string;
+  browseNodes?: string[];
   attributes?: Record<string, any>;
+  dimensions?: {
+    length?: number;
+    width?: number;
+    height?: number;
+    weight?: number;
+    unit?: string;
+  };
+  keywords?: string[];
+  searchTerms?: string[];
+  targetAudience?: string;
+  status?: 'BUYABLE' | 'DISCOVERABLE' | 'DELETED';
+  listingId?: string;
+  issueMessages?: Array<{
+    code: string;
+    message: string;
+    severity: 'ERROR' | 'WARNING' | 'INFO';
+    attributeName?: string;
+  }>;
+  createdDate?: string;
+  lastUpdatedDate?: string;
 }
 
 export interface ScanResult {
